@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- fonts google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+
+    <div id="flipCard" class="creditCard">
+      <div class="imageCard">
+        <img id="cardFlag" class="imgFlagHide" src="" alt="Card flag">
+        <img class="approx" src="assets/approximation.svg" alt="approximation icon">
+      </div>
+
+      <form action="#" method="post">
+        <input id="inputNumberMirror" class="cardNumber" type="text" disabled readonly
+          placeholder="**** **** **** ****">
+        <div class="nameAndMonth">
+          <input id="inputNameMirror" class="cardName" type="text" disabled readonly placeholder="Seu nome aqui">
+          <input id="inputValidityMirror" type="text" disabled readonly placeholder="** / **">
+        </div>
+        <div id="cvvMirrorDiv" class="cvvMirrorDiv">
+          <label class="cvvLabel" for="inputSecurityMirror">CVV</label>
+          <input class="cvv" id="inputSecurityMirror" type="text" readonly placeholder=" * * *">
+        </div>
+      </form>
+
+    </div>
+
+
+
+    <div class="inputForm">
+      <form action="#" method="post">
+        <div class="number-name">
+
+          <div id="inputCardNumber" class="inputCardNumber">
+            <label for="">Número do cartão</label>
+            <input id="inputNumber" type="text" placeholder="**** **** **** ****" minlength="19" maxlength="19"
+              required>
+            <p class="warningNumber"><img src="assets/Warning.svg" alt="warnign advice">Insira um número de cartão
+              válido</p>
+          </div>
+          <div class="inputCardName">
+            <label for="">Nome do titular</label>
+            <input id="inputName" type="text" placeholder="Nome como está no cartão" required>
+          </div>
+
+        </div>
+
+        <div class="validity-cvv">
+          <div>
+            <label for="">Validade</label>
+            <input id="inputValidity" class="inputMonth" type="text" minlength="5" maxlength="5" placeholder="mm/aa"
+              required>
+          </div>
+          <div>
+            <label for="">CVV</label>
+            <input id="inputCvv" class="input-cvv" type="text" placeholder="***" minlength="3" maxlength="3" required>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <p class="text-safe">Seus dados estão seguros</p>
+
+    <button id="btn" type="submit">Adicionar cartão</button>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+
+</html>

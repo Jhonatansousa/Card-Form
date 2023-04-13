@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #1F2937;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.creditCard {
+  margin-top: 9.6rem;
+  width: 28rem;
+  height: 16.8rem;
+  background-image: url(assets/Background.png);
+  border-radius: 16px;
+  position: relative;
+
+}
+
+.imgFlagHide {
+  visibility: hidden;
+}
+
+#cardFlag.imgFlagShow {
+  visibility: visible;
+}
+
+.imageCard {
+  width: 23.2rem;
+  height: 2.3rem;
+  margin: 1.6rem 2.4rem auto 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.creditCard form {
+  display: grid;
+
+  margin: 5rem 2.4rem 0 2.4rem;
+}
+
+.nameAndMonth {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+}
+
+
+.nameAndMonth input:last-child {
+  width: 5rem;
+}
+
+.creditCard input {
+  background-color: transparent;
+  color: #F9FAFB;
+  border: none;
+}
+
+#inputNumberMirror {
+  font-size: 1.6rem;
+  letter-spacing: .4rem;
+}
+
+.cvv,
+.cvvLabel {
+  display: none;
+}
+
+.flip-style input {
+  display: none;
+}
+
+.flip-style .imageCard {
+  background-color: #111827;
+  width: 27.8rem;
+  height: 3.2rem;
+  margin: 1.6rem auto;
+
+}
+
+.flip-style .imageCard img {
+  display: none;
+}
+
+
+.cvvMirrorDiv {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.flip-style .cvvLabel {
+  display: inline-block;
+  color: #E5E7EB;
+  transform: rotateY(180deg);
+  font-size: 1.4rem;
+
+}
+
+
+.flip-style .cvv {
+  display: inline-block;
+  background-color: #D1D5DB;
+  width: 20.1rem;
+  height: 3rem;
+  letter-spacing: .4rem;
+  border-radius: 4px;
+}
+
+.flip-style .cvv::before {
+  content: 'CVV';
+  display: inline;
+  width: 2rem;
+  height: 1rem;
+}
+
+/*  FORM SECTION  */
+.inputCardNumber p {
+  display: none;
+
+}
+
+.incorreto #inputNumber {
+  border-color: #FB7185;
+}
+
+.incorreto p {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+
+  color: #FB7185;
+}
+
+
+label {
+  color: #E5E7EB;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.inputForm {
+  margin-top: 4.8rem;
+  width: 32.7rem;
+}
+
+.inputForm input {
+  height: 4rem;
+  background-color: #111827;
+  border: 1.5px solid #374151;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+  padding-left: 1.2rem;
+}
+
+
+.inputForm input:focus {
+  border-color: #9333EA;
+}
+
+.number-name div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.validity-cvv {
+  display: flex;
+}
+
+.inputMonth {
+  width: 18.2rem;
+}
+
+.input-cvv {
+  width: 12.9rem;
+}
+
+#inputSecurityMirror {
+  color: black;
+  transform: rotateY(180deg);
+  text-align: end;
+  padding-right: 1rem;
+}
+
+
+.text-safe {
+  color: #E5E7EB;
+  font-size: 1.4rem;
+  margin-top: 4.8rem;
+}
+
+.text-safe::before {
+  content: '';
+  background: url(assets/Vector.svg);
+  background-size: cover;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: .8rem;
+  display: inline-flex;
+}
+
+button {
+  margin: 7.8rem auto 2.4rem auto;
+  font-size: 1.8rem;
+  width: 32.6rem;
+  height: 5.6rem;
+  border-radius: 4px;
+  background: #9333EA;
+  color: #F9FAFB;
+  border: none;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+button:hover {
+  background: #A855F7;
+  transition: .2s;
+}
+
+button:focus {
+  border: 2px solid #F9FAFB;
+  border-radius: 8px;
+
+}
+
+button:disabled {
+  opacity: 50%;
+}
+
+button:disabled:hover {
+  background: #9333EA;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* card animation */
+.flip-vertical-left {
+  -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+
+@-webkit-keyframes flip-vertical-left {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes flip-vertical-left {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+
+
+
+
+
+@media (min-width:801px) {
+  body {
+    background-color: #111827;
+    position: relative;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    width: 73.6rem;
+    height: 42rem;
+    margin: 16rem auto auto auto;
+    gap: 6.4rem;
+    background-color: #1F2937;
+    padding: 3.2rem;
+
+    border: 1px solid #374151;
+    border-radius: 8px;
+  }
+
+  .creditCard {
+
+    order: 2;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .inputForm {
+    margin: 0 auto;
+  }
+
+  button {
+    position: absolute;
+    right: 49.7%;
+    top: 25.2rem;
+    transform: translate(50%);
+    width: 67.2rem;
+  }
+
+  .text-safe {
+    position: absolute;
+    top: 17rem;
+    right: 12.4%;
+  }
+
+
+}
