@@ -30,7 +30,14 @@ https://jhonatansousa.github.io/Card-Form/
 ## Contribuição
 
 Sinta-se à vontade para contribuir com este projeto fazendo um fork e submetendo um pull request com suas melhorias.
-
+<div align="center">
+<img width="48%" src="https://user-images.githubusercontent.com/126415306/231904890-aa2b17f2-9f5c-4d64-a517-f45d4e9ef26f.png" alt="layout web">
+<img width="16%" src="https://user-images.githubusercontent.com/126415306/231905025-882dc83e-aa57-4102-a82d-266ef90301a5.png" alt="layout mobile">
+<img width="16%" src="https://user-images.githubusercontent.com/126415306/231905203-d63d8d14-81f1-4b11-bfcb-ae90d8aff9ae.png" alt="layout mobile">
+<img width="14.5%" src="https://user-images.githubusercontent.com/126415306/231905376-d8d7bc6a-079d-4cc8-b81a-f216d621ec75.png" alt="layout mobile">
+</div>
+<br>
+<br>
 <a target="_blank" href="https://www.linkedin.com/in/jhonatan-s-da-silva-a1a77b268/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
 
 <img src="http://ForTheBadge.com/images/badges/built-with-love.svg">
