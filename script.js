@@ -64,18 +64,46 @@ inputName.addEventListener("input", () => {
 const inputValidity = document.getElementById("inputValidity")
 const inputValidityMirror = document.getElementById("inputValidityMirror")
 
+
+
+
 inputValidity.addEventListener("input", () => {
   inputValidityMirror.value = inputValidity.value
-
 })
-// card flip animation
+
+
+inputValidity.addEventListener("input", () => {
+  let valor = inputValidity.value;
+  valor = valor.replace(/\D/g, ""); // remove todos os caracteres não numéricos
+  valor = valor.slice(0, 4); // limita o comprimento do valor para 4 caracteres
+  valor = valor.replace(/(\d{2})(\d)/, "$1/$2"); // insere a barra separadora
+
+  inputValidity.value = valor;
+});
+
+
+
+
+
+
+
+//cvv input, aqui é espelhado o input no cartão
 const cvvInput = document.getElementById("inputCvv")
 const cvvMirror = document.getElementById("inputSecurityMirror")
 
 cvvInput.addEventListener("input", () => {
   inputSecurityMirror.value = cvvInput.value
+  //function q faz com que o input text só permita ser digitado números e no máximo 3 caracteres
+  let value = cvvInput.value
+  value = value.replace(/\s/g, "")
+  value = value.replace(/[^0-9]/g, '')
+  value = value.trim()
+  value = value.substr(0, 3)
+
+  cvvInput.value = value
 })
 
+// card flip animation
 // aqui é a animação de mostrar a parte de trás do cartao, quando o input cvv estiver focado, a animação irá ser executada, também foi colocado um atraso no estilo da parte de trás do cartão, para que o efeito fique o mais natural possivel
 const flipCard = document.getElementById("flipCard")
 
